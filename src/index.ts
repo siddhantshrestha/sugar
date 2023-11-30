@@ -79,3 +79,49 @@ cid = 2
  }
 
  smth('This is null')
+
+ //Interface
+ // instead of type, interface is prefer but 
+ // it cannot be used with primitive and union
+
+ interface Users{
+    id: number
+    name:string
+    //optional condition if age is not present jj
+    age?: number
+}
+
+const users: Users={
+    id:12,
+    name:'Sid'
+}
+
+// interface ID = number | string cause error
+type ID = number | string
+const ID = 'DUKE' || 2
+
+//interface with function
+
+interface mathFunc {
+    (x: number, y:number): number
+}
+
+const add: mathFunc = (x:number,y:number):number => x+y
+console.log('Add:',add(4,3));
+const multiply: mathFunc = (x:number,y:number):number => x*y
+console.log('Multiply:',multiply(4,3));
+
+//Classes
+
+class Car{
+    model: number
+    name: string
+
+    constructor(model:number, name:string){
+        this.model=model
+        this.name= name
+    }
+}
+
+const honda = new Car(2001,'supra')
+

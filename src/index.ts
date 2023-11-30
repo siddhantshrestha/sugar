@@ -45,3 +45,37 @@ enum Keys2{
 }
 
 console.log(Keys2.right);
+
+//Objects
+
+type User = {
+    id: number
+    name:string
+}
+
+const user: User={
+    id:1,
+    name:'Sid'
+}
+
+//Type assertion
+
+let nid:number=1
+// let cid= <number>nid
+let cid= nid as number
+
+cid = 2
+
+//function
+
+ function addNum(x: number, y: number){
+    return x + y
+ }
+
+ console.log(addNum(10,2));
+
+ function smth(msg: string|number):void{
+    console.log(msg);
+ }
+
+ smth('This is null')

@@ -141,10 +141,20 @@ class Company extends Car {
   }
 }
 
+const gadi = new Company(2001, "supra", "Honda")
 
-const gadi = new Company(2001, "supra","Honda")
-
-console.log(gadi);
+console.log(gadi)
 console.log(gadi.buy())
 
-//sub class
+//generics
+// it allow us to add placeholder of the type whatever datatype we want
+
+function getArray<T>(items: T[]): T[] {
+  return new Array().concat(items)
+}
+
+let numArr = getArray<number>([1, 2, 3, 4, 5])
+let strArr = getArray<string>(["sid", "is", "good", "boy"])
+strArr.push("hello")
+
+console.log(strArr)
